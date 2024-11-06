@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <script src="https://kit.fontawesome.com/390db24bbf.js" crossorigin="anonymous"></script>
+    <link href="style.css" rel="stylesheet">
+
+    <title>B&C</title>
+</head>
+<body>
+
+<div class="container">
+<header>
+    <div class="b-back-img">
+        <div></div>
+    </div>
+    <div class="b-header">
+        <div class="i-header">
+            <div class="header-btn">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="i-header-center">
+            <div class="header-logo">
+                ART & DESIGN
+                <div class="header-logo-text">B<span>&</span>c</div>
+            </div>
+            <div class="header-line1"></div>
+            <div class="header-nav">
+                <div class="i-header-nav">
+                    B&C PORTFOLIO
+                </div>
+                <div class="i-header-nav">
+                    BASIC FOR PEOPLE
+                </div>
+                <div class="i-header-nav">
+                    WITH UNIQUE
+                </div>
+                <div class="i-header-nav">
+                    MINIMAL STYLE</div>
+            </div>
+            <div class="header-line2"></div>
+            <div class="header-mail">info@moontheme.net</div>
+        </div>
+        <div class="i-header">
+            <div class="arrow">
+                <i class="fa-solid fa-arrow-down-long"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+    <section class="about">
+        <div class="title">
+            <div class="title-pref">01</div>
+            <h2>About me</h2>
+        </div>
+        
+        <div class="b-about">
+            <div class="i-about aright"><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            </div>
+            <div class="i-about ajust"><p>Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.</p>
+                <p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+            </div>
+            <div class="i-about aleft"><p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+            <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
+        </div>
+        <blockquote class="about-quote">
+            "Praesent pulvinar eu augueat porta. Maecenas porta vulutpat <span>nulla vitae</span> dictum"
+        </blockquote>
+    </section>
+
+    <section class="work">
+        <div class="title">
+            <div class="title-pref">02</div>
+            <h2>Work</h2>
+        </div>
+        <div class="b-work">
+            <div class="i-work">
+                <div class="i-work-number">
+                    <div class="i-work-btn i-work-btn-active">01</div>
+                    <div class="i-work-btn">02</div>
+                    <div class="i-work-btn">03</div>
+                    <div class="i-work-btn">04</div>
+                </div>
+                <div class="i-work-img">
+                    <img class="fadeIn i-work-img-active" src="img/01.jpg" alt="">
+                    <img class="fadeIn" src="img/02.jpg" alt="">
+                    <img class="fadeIn" src="img/03.jpg" alt="">
+                    <img class="fadeIn" src="img/04.jpg" alt="">
+                </div>
+                <div class="i-work-title">
+                    <div>Fashion/brand</div>
+                    Brands photo & Noise
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="blog">
+        <div class="title">
+            <div class="title-pref">03</div>
+            <h2>Blog</h2>
+        </div>
+        <div class="b-blog">
+            <div class="i-blog">
+                <div class="i-blog-date">
+                    12<span>NOV</span>
+                </div>
+                <div class="i-blog-inner">
+                    <span>By admin, 1 week ago</span>
+                    <h3>Vestibulum ac lacus ac est venenatis elementum</h3>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <a href="">READ MORE</a>
+                </div>
+            </div>
+            <div class="i-blog">
+                <div class="i-blog-date">
+                    12<span>NOV</span>
+                </div>
+                <div class="i-blog-inner">
+                    <span>By admin, 1 week ago</span>
+                    <h3>Vestibulum ac lacus ac est venenatis elementum</h3>
+                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+                    <a href="">READ MORE</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<footer>
+    <div class="b-footer">
+        <div class="i-footer aright">
+            <span>info@moontheme.net | +452 56 4332 455</span>
+            <p>Copyright 2024</p>
+        </div>
+        <div class="i-footer i-footer-soc aleft">
+            <i class="fa-brands fa-facebook-f"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-google"></i>
+            <i class="fa-brands fa-behance"></i>
+        </div>
+    </div>
+</footer>
+
+</div>
+<script>
+
+    var slider = document.querySelector('.i-work-number');
+    var btn = document.getElementsByClassName('i-work-btn');
+    var iold = 0;
+
+    slider.addEventListener('click', event => {
+        console.log(event.target);
+
+        var inew = Array.from(btn).indexOf(event.target);
+        //var img = document.querySelector('.i-work-img').children[inew];
+        let imgBlock = document.querySelector('.i-work-img');
+        let btnBlock = document.querySelector('.i-work-number')
+
+        //alert(inew != -1);
+        if (inew != -1){
+            btnBlock.children[iold].classList.remove('i-work-btn-active');
+            imgBlock.children[iold].classList.remove('i-work-img-active');
+
+            btnBlock.children[inew].classList.add('i-work-btn-active');
+            imgBlock.children[inew].classList.add('i-work-img-active');
+            //img.classList.add('i-work-img-active');
+            iold = inew;
+        }
+
+
+        console.log(inew);
+    })
+</script>
+</body>
+</html>
