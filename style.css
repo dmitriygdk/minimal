@@ -499,6 +499,10 @@ footer{
 
     }
 
+    .b-back-img{
+        right: 0%;
+    }
+
     .i-footer:first-child{
         border: none;
         text-align: center;
