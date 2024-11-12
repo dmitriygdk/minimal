@@ -1,6 +1,4 @@
 body{
-    height: 2000px;
-    width: 100%;
     font-family: Calibri;
 }
 
@@ -29,16 +27,33 @@ header{
     width: 100%;
     height: 650px;
     position: relative;
+    margin-bottom: 150px;
 }
 
-
-.container{
+header:before{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
     width: 100%;
-    display: flex;
-    gap: 150px;
-    flex-direction: column;
-    align-items: center;
+    height: 100%;
+    background: rgb(227,227,227);
+    background: linear-gradient(177deg, rgba(227,227,227,1) 0%, rgba(251,251,251,0.8) 50%);
 }
+
+/*! хз нужно или нет
+header:after{
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(247,248,250);
+    background: linear-gradient(0deg, rgba(247,248,250,1) 0%, rgba(242,243,245,1) 100%);
+}
+ !*/
+
 
 .b-back-img{
     position: absolute;
@@ -48,17 +63,7 @@ header{
     bottom: 0px;
     background-image: url("img/girl.jpg");
     background-size: cover;
-    z-index: -100;
-}
-
-.b-back-img div{
-    //mix-blend-mode: multiply;
-  //  background: #731c1c;
-    background: rgb(255 255 255 / 75%);
-    position: relative;
-    width: 100%;
-    height: 100%;
-
+    z-index: -3;
 }
 
 .b-header{
@@ -127,6 +132,15 @@ header{
     font-weight: bold;
 }
 
+.i-header-nav a{
+    color: black;
+}
+
+.i-header-nav a:hover{
+    color: #024fff;
+}
+
+
 .header-line1{
     height: 4px;
     width: 80px;
@@ -173,24 +187,32 @@ header{
     transform: rotate(0.05turn);
 }
 
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 150px;
+}
+
 .b-about{
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 .i-about{
     color: #949494;
-    width: 300px;
+    max-width: 300px;
+    flex-basis: auto;
 }
 
 .i-about p{
-    padding-bottom: 10px;
+    padding-bottom: 15px;
 }
 
 .i-about:hover{
     color: #000;
-    font-weight: bold;
 }
 
 .about-quote{
@@ -206,33 +228,52 @@ header{
     color: #004ffe;
 }
 
-.b-work{
-
+.work{
+    margin-bottom: 150px;
 }
 
-.i-work{
+.b-work{
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
-.i-work>div{
-    //width: 33.3%;
-    width: 270px;
+.i-work{
+    width: 300px;
+    position: relative;
 }
 
 .i-work-img{
+   // height: 400px;
+}
+
+.i-work-img img{
+    width: 300px;
     height: 400px;
-    //background-color: #024fff;
+    display: none;
+    object-fit: cover;
+}
+
+.i-work-img-active{
+    display: block !important;
 }
 
 .i-work-title{
+
+}
+
+.i-work-title>div{
     font-size: 24px;
     font-weight: bold;
     z-index: 200;
-    margin-left: -40px;
+    position: absolute;
+    background-color: white;
+    padding-left: 10px;
+    left: -50px;
+    top: -20px;
 }
 
-.i-work-title div{
+.i-work-title__cat{
     font-size: 15px;
     color: #004ffe;
 }
@@ -249,6 +290,10 @@ header{
 
 .i-work-btn {
     margin-right: 50px;
+}
+
+.i-work-btn:hover{
+    cursor: pointer;
 }
 
 .i-work-btn-active{
@@ -301,18 +346,6 @@ header{
     }
 }
 
-
-.i-work-btn:hover{
-    cursor: pointer;
-}
-
-.i-work-img img{
-    width: 270px;
-    height: 400px;
-    display: none;
-    object-fit: cover;
-}
-
 .fadeIn {
     -webkit-animation-name: fadeIn;
     animation-name: fadeIn;
@@ -330,17 +363,17 @@ header{
     100% {opacity: 1;}
 }
 
-.i-work-img-active{
-    display: block !important;
-}
-
 /*BLOG BLOG BLOG BLOG*/
 
+.blog{
+    margin-bottom: 150px;
+}
 
 .b-blog{
     display: flex;
     gap:75px;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .i-blog{
     width: 460px;
@@ -431,22 +464,45 @@ footer{
 }
 
 @media (max-width: 1440px) {
-    .container{
-        padding: 0 40px;
-    }
+
 }
 
 @media (max-width: 1024px) {
+    .about{
+        padding: 0 30px;
+    }
+
+    .i-about{
+        max-width: 215px;
+    }
 
 }
 
 @media (max-width: 768px) {
     .i-about{
-        flex: 0 0 50%;
+
     }
 }
 
 @media (max-width: 576px){
+    .i-work-btn{
+        margin-right: 10px;
+    }
 
+    .i-work{
+        width: 250px;
+    }
+
+    .i-work-img img{
+        width: 250px;
+    }
+
+    .i-work-title, .i-work-number{
+        align-self: end;
+    }
+
+    .i-work-title>div{
+        left: -200px;
+    }
 }
 
