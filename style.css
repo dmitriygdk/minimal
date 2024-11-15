@@ -1,5 +1,15 @@
+@font-face {
+    font-family: 'Calibri';
+    src: url('fonts/Calibri/calibri.ttf') format('ttf'), 
+    url('fonts/Calibri/calibri_bold.ttf') format('ttf');
+  }
+  
+  body {
+    font-family: 'Calibri', Arial, sans-serif;
+  }
+
 body{
-    font-family: Calibri;
+    //font-family: Calibri;
 }
 
 *{
