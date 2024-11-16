@@ -1,16 +1,24 @@
 @font-face {
-    font-family: 'Calibri';
-    src: url('fonts/Calibri/calibri.ttf') format('ttf'), 
-    url('fonts/Calibri/calibri_bold.ttf') format('ttf');
-  }
-  
-  body {
-    font-family: 'Calibri', Arial, sans-serif;
+    font-family: 'MonsterratMy';
+    src: url('fonts/Montserrat-Bold.ttf') format("truetype"),
+    url('fonts/Montserrat-Medium.ttf') format('truetype'),
+    url('fonts/Montserrat-MediumItalic.ttf') format('truetype');
+    font-style: normal; 
+    font-weight: 700;
   }
 
-body{
-    //font-family: Calibri;
+@font-face {
+    font-family: 'MonsterratMy2';
+    src: url('fonts/Montserrat-Medium.ttf') format('truetype');
+    font-style: normal; 
+    font-weight: 500;
 }
+  
+body {
+    font-family: 'MonsterratMy2';
+    font-size: 13px;
+}
+
 
 *{
     margin: 0;
@@ -107,7 +115,7 @@ header:after{
     width: 70px;
     padding: 5px;
     background-color: #024fff;
-    font-size: 15px;
+    font-size: 12px;
     color: #fff;
     font-weight: bold;
     position: relative;
@@ -115,11 +123,9 @@ header:after{
 }
 
 .header-logo-text{
-
-    font-size: 70px;
-
+    font-size: 61px;
     position: absolute;
-    bottom: -22px;
+    bottom: -18px;
     left: -2px;
 }
 
@@ -144,6 +150,7 @@ header:after{
 
 .i-header-nav a{
     color: black;
+    font-family: 'MonsterratMy';
 }
 
 .i-header-nav a:hover{
@@ -167,6 +174,7 @@ header:after{
 
 .header-mail{
     color: #024fff;
+    font-family: 'MonsterratMy';
 }
 
 
@@ -194,7 +202,7 @@ header:after{
     position: absolute;
     left: 17px;
     background-color: #004ffe;
-    transform: rotate(0.05turn);
+    transform: rotate(0.06turn);
 }
 
 .about{
@@ -253,9 +261,6 @@ header:after{
     position: relative;
 }
 
-.i-work-img{
-   // height: 400px;
-}
 
 .i-work-img img{
     width: 300px;
@@ -266,10 +271,6 @@ header:after{
 
 .i-work-img-active{
     display: block !important;
-}
-
-.i-work-title{
-
 }
 
 .i-work-title>div{
@@ -433,7 +434,7 @@ header:after{
 .i-blog-inner a{
     font-size: 10px;
     color: #004ffe;
-    font-weight: bold;
+    font-family: 'MonsterratMy';
     letter-spacing: 3px;
     align-self: flex-start;
 }
@@ -449,7 +450,7 @@ footer{
 }
 
 .i-footer{
-    width: 300px;
+    width: 350px;
     padding: 0 40px;
 }
 
@@ -502,17 +503,15 @@ footer{
         max-width: 600px;
     }
 
-}
-
-@media (max-width: 768px) {
-    .i-about{
-
+    .b-footer{
+        gap: 50px;
     }
 
-    .b-back-img{
-        right: 0%;
+    .i-footer{
+        width: 600px;
+        padding: 0;
     }
-
+    
     .i-footer:first-child{
         border: none;
         text-align: center;
@@ -522,12 +521,27 @@ footer{
         justify-content: center;
     }
 
-    .b-footer{
-        gap: 50px;
+}
+
+@media (max-width: 768px) {
+
+    .b-back-img{
+        right: 0%;
     }
+
+
+    .i-footer-soc{
+        justify-content: center;
+    }
+
+
 }
 
 @media (max-width: 576px){
+    .b-back-img{
+        width: 100%;
+    }
+
     .i-work-btn{
         margin-right: 10px;
     }
